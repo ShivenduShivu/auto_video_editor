@@ -1,282 +1,900 @@
 [
   {
     "start": 0.0,
-    "end": 4.36,
+    "end": 2.72,
     "words": [
       {
-        "word": "Hello",
+        "word": "Hi",
         "start": 0.0,
-        "end": 0.96,
+        "end": 1.1,
         "emphasized": true
       },
       {
         "word": "everyone,",
-        "start": 0.96,
-        "end": 1.36,
-        "emphasized": false
-      },
-      {
-        "word": "today",
-        "start": 1.72,
-        "end": 1.9,
+        "start": 1.1,
+        "end": 1.46,
         "emphasized": false
       },
       {
         "word": "I",
         "start": 1.9,
-        "end": 2.06,
+        "end": 2.02,
         "emphasized": true
       },
       {
         "word": "am",
-        "start": 2.06,
-        "end": 2.16,
+        "start": 2.02,
+        "end": 2.18,
         "emphasized": false
       },
       {
-        "word": "demonstrating",
-        "start": 2.16,
-        "end": 2.74,
+        "word": "Sivindu.",
+        "start": 2.18,
+        "end": 2.72,
         "emphasized": true
-      },
-      {
-        "word": "an",
-        "start": 2.74,
-        "end": 2.98,
-        "emphasized": false
-      },
-      {
-        "word": "automatic",
-        "start": 2.98,
-        "end": 3.54,
-        "emphasized": true
-      },
-      {
-        "word": "video",
-        "start": 3.54,
-        "end": 4.02,
-        "emphasized": true
-      },
-      {
-        "word": "editor.",
-        "start": 4.02,
-        "end": 4.36,
-        "emphasized": false
       }
     ]
   },
   {
-    "start": 4.8,
-    "end": 9.46,
+    "start": 3.1,
+    "end": 5.88,
     "words": [
       {
-        "word": "It",
-        "start": 4.8,
-        "end": 4.9,
-        "emphasized": false
-      },
-      {
-        "word": "uses",
-        "start": 4.9,
-        "end": 5.26,
-        "emphasized": false
-      },
-      {
-        "word": "artificial",
-        "start": 5.26,
-        "end": 5.94,
+        "word": "Today",
+        "start": 3.1,
+        "end": 3.78,
         "emphasized": true
       },
       {
-        "word": "intelligence",
-        "start": 5.94,
-        "end": 6.44,
+        "word": "I",
+        "start": 3.78,
+        "end": 3.9,
         "emphasized": true
+      },
+      {
+        "word": "want",
+        "start": 3.9,
+        "end": 4.18,
+        "emphasized": false
       },
       {
         "word": "to",
-        "start": 6.44,
+        "start": 4.18,
+        "end": 4.38,
+        "emphasized": false
+      },
+      {
+        "word": "show",
+        "start": 4.38,
+        "end": 4.66,
+        "emphasized": false
+      },
+      {
+        "word": "you",
+        "start": 4.66,
+        "end": 4.84,
+        "emphasized": false
+      },
+      {
+        "word": "something",
+        "start": 4.84,
+        "end": 5.16,
+        "emphasized": false
+      },
+      {
+        "word": "important.",
+        "start": 5.16,
+        "end": 5.88,
+        "emphasized": true
+      }
+    ]
+  },
+  {
+    "start": 6.5,
+    "end": 12.3,
+    "words": [
+      {
+        "word": "Most",
+        "start": 6.5,
         "end": 6.74,
         "emphasized": false
       },
       {
-        "word": "add",
+        "word": "people",
         "start": 6.74,
-        "end": 6.88,
+        "end": 7.0,
         "emphasized": false
       },
       {
-        "word": "captions,",
-        "start": 6.88,
-        "end": 7.3,
-        "emphasized": false
-      },
-      {
-        "word": "detect",
-        "start": 7.62,
-        "end": 7.9,
-        "emphasized": false
-      },
-      {
-        "word": "infectious",
-        "start": 7.9,
-        "end": 8.36,
-        "emphasized": true
-      },
-      {
-        "word": "and",
-        "start": 8.36,
-        "end": 8.68,
-        "emphasized": false
-      },
-      {
-        "word": "create",
-        "start": 8.68,
-        "end": 8.92,
-        "emphasized": false
-      },
-      {
-        "word": "animations.",
-        "start": 8.92,
-        "end": 9.46,
-        "emphasized": true
-      }
-    ]
-  },
-  {
-    "start": 10.06,
-    "end": 12.88,
-    "words": [
-      {
-        "word": "This",
-        "start": 10.06,
-        "end": 10.46,
-        "emphasized": false
-      },
-      {
-        "word": "system",
-        "start": 10.46,
-        "end": 10.8,
-        "emphasized": false
-      },
-      {
-        "word": "can",
-        "start": 10.8,
-        "end": 10.94,
-        "emphasized": false
-      },
-      {
-        "word": "save",
-        "start": 10.94,
-        "end": 11.2,
-        "emphasized": false
-      },
-      {
-        "word": "hours",
-        "start": 11.2,
-        "end": 11.58,
-        "emphasized": false
-      },
-      {
-        "word": "of",
-        "start": 11.58,
-        "end": 11.82,
-        "emphasized": false
-      },
-      {
-        "word": "manual",
-        "start": 11.82,
-        "end": 12.04,
-        "emphasized": false
-      },
-      {
-        "word": "editing",
-        "start": 12.04,
-        "end": 12.44,
-        "emphasized": false
-      },
-      {
-        "word": "work.",
-        "start": 12.44,
-        "end": 12.88,
-        "emphasized": false
-      }
-    ]
-  },
-  {
-    "start": 13.78,
-    "end": 16.62,
-    "words": [
-      {
-        "word": "The",
-        "start": 13.78,
-        "end": 13.9,
-        "emphasized": false
-      },
-      {
-        "word": "scene",
-        "start": 13.9,
-        "end": 14.06,
-        "emphasized": false
-      },
-      {
-        "word": "learning",
-        "start": 14.06,
-        "end": 14.38,
-        "emphasized": false
-      },
-      {
-        "word": "max",
-        "start": 14.38,
-        "end": 14.78,
+        "word": "think",
+        "start": 7.0,
+        "end": 7.34,
         "emphasized": false
       },
       {
         "word": "video",
-        "start": 14.78,
-        "end": 15.12,
+        "start": 7.34,
+        "end": 7.82,
+        "emphasized": true
+      },
+      {
+        "word": "editing",
+        "start": 7.82,
+        "end": 8.1,
         "emphasized": false
       },
       {
-        "word": "production",
-        "start": 15.12,
-        "end": 15.54,
+        "word": "is",
+        "start": 8.1,
+        "end": 8.6,
+        "emphasized": true
+      },
+      {
+        "word": "about",
+        "start": 8.6,
+        "end": 8.82,
         "emphasized": false
       },
       {
-        "word": "faster",
-        "start": 15.54,
-        "end": 15.96,
+        "word": "timelines,",
+        "start": 8.82,
+        "end": 9.4,
+        "emphasized": true
+      },
+      {
+        "word": "keyframes",
+        "start": 9.96,
+        "end": 10.3,
         "emphasized": false
       },
       {
         "word": "and",
-        "start": 15.96,
-        "end": 16.26,
+        "start": 10.3,
+        "end": 10.88,
+        "emphasized": true
+      },
+      {
+        "word": "complicated",
+        "start": 10.88,
+        "end": 11.62,
+        "emphasized": true
+      },
+      {
+        "word": "software.",
+        "start": 11.62,
+        "end": 12.3,
+        "emphasized": true
+      }
+    ]
+  },
+  {
+    "start": 13.62,
+    "end": 19.92,
+    "words": [
+      {
+        "word": "But",
+        "start": 13.62,
+        "end": 13.9,
         "emphasized": false
       },
       {
-        "word": "easier.",
+        "word": "the",
+        "start": 13.9,
+        "end": 14.08,
+        "emphasized": false
+      },
+      {
+        "word": "truth",
+        "start": 14.08,
+        "end": 14.36,
+        "emphasized": false
+      },
+      {
+        "word": "is,",
+        "start": 14.36,
+        "end": 14.78,
+        "emphasized": false
+      },
+      {
+        "word": "when",
+        "start": 15.0,
+        "end": 15.12,
+        "emphasized": false
+      },
+      {
+        "word": "you",
+        "start": 15.12,
+        "end": 15.3,
+        "emphasized": false
+      },
+      {
+        "word": "record",
+        "start": 15.3,
+        "end": 15.74,
+        "emphasized": false
+      },
+      {
+        "word": "talking",
+        "start": 15.74,
+        "end": 16.26,
+        "emphasized": true
+      },
+      {
+        "word": "head",
         "start": 16.26,
-        "end": 16.62,
+        "end": 16.56,
+        "emphasized": false
+      },
+      {
+        "word": "video,",
+        "start": 16.56,
+        "end": 16.94,
+        "emphasized": false
+      },
+      {
+        "word": "all",
+        "start": 17.4,
+        "end": 17.62,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 17.62,
+        "end": 17.82,
+        "emphasized": false
+      },
+      {
+        "word": "information",
+        "start": 17.82,
+        "end": 18.3,
+        "emphasized": true
+      },
+      {
+        "word": "is",
+        "start": 18.3,
+        "end": 18.5,
+        "emphasized": false
+      },
+      {
+        "word": "already",
+        "start": 18.5,
+        "end": 18.98,
+        "emphasized": true
+      },
+      {
+        "word": "in",
+        "start": 18.98,
+        "end": 19.32,
+        "emphasized": false
+      },
+      {
+        "word": "your",
+        "start": 19.32,
+        "end": 19.44,
+        "emphasized": false
+      },
+      {
+        "word": "voice.",
+        "start": 19.44,
+        "end": 19.92,
+        "emphasized": true
+      }
+    ]
+  },
+  {
+    "start": 20.62,
+    "end": 25.82,
+    "words": [
+      {
+        "word": "The",
+        "start": 20.62,
+        "end": 20.74,
+        "emphasized": false
+      },
+      {
+        "word": "words,",
+        "start": 20.74,
+        "end": 21.14,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 21.66,
+        "end": 21.76,
+        "emphasized": false
+      },
+      {
+        "word": "pauses,",
+        "start": 21.76,
+        "end": 22.32,
+        "emphasized": true
+      },
+      {
+        "word": "the",
+        "start": 22.86,
+        "end": 22.9,
+        "emphasized": false
+      },
+      {
+        "word": "emphasis",
+        "start": 22.9,
+        "end": 23.34,
+        "emphasized": false
+      },
+      {
+        "word": "already",
+        "start": 23.34,
+        "end": 24.02,
+        "emphasized": true
+      },
+      {
+        "word": "describes",
+        "start": 24.02,
+        "end": 24.48,
+        "emphasized": true
+      },
+      {
+        "word": "how",
+        "start": 24.48,
+        "end": 24.88,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 24.88,
+        "end": 25.08,
+        "emphasized": false
+      },
+      {
+        "word": "video",
+        "start": 25.08,
+        "end": 25.36,
+        "emphasized": false
+      },
+      {
+        "word": "should",
+        "start": 25.36,
+        "end": 25.56,
+        "emphasized": false
+      },
+      {
+        "word": "look.",
+        "start": 25.56,
+        "end": 25.82,
         "emphasized": false
       }
     ]
   },
   {
-    "start": 17.08,
-    "end": 17.48,
+    "start": 26.7,
+    "end": 31.3,
+    "words": [
+      {
+        "word": "So,",
+        "start": 26.7,
+        "end": 27.02,
+        "emphasized": false
+      },
+      {
+        "word": "instead",
+        "start": 27.18,
+        "end": 27.52,
+        "emphasized": false
+      },
+      {
+        "word": "of",
+        "start": 27.52,
+        "end": 27.74,
+        "emphasized": false
+      },
+      {
+        "word": "manually",
+        "start": 27.74,
+        "end": 28.12,
+        "emphasized": false
+      },
+      {
+        "word": "editing",
+        "start": 28.12,
+        "end": 28.44,
+        "emphasized": false
+      },
+      {
+        "word": "videos,",
+        "start": 28.44,
+        "end": 28.9,
+        "emphasized": true
+      },
+      {
+        "word": "what",
+        "start": 29.32,
+        "end": 29.54,
+        "emphasized": false
+      },
+      {
+        "word": "if",
+        "start": 29.54,
+        "end": 29.7,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 29.7,
+        "end": 29.86,
+        "emphasized": false
+      },
+      {
+        "word": "editor",
+        "start": 29.86,
+        "end": 30.18,
+        "emphasized": false
+      },
+      {
+        "word": "could",
+        "start": 30.18,
+        "end": 30.4,
+        "emphasized": false
+      },
+      {
+        "word": "decide",
+        "start": 30.4,
+        "end": 30.76,
+        "emphasized": false
+      },
+      {
+        "word": "for",
+        "start": 30.76,
+        "end": 31.06,
+        "emphasized": false
+      },
+      {
+        "word": "you?",
+        "start": 31.06,
+        "end": 31.3,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 31.92,
+    "end": 38.98,
+    "words": [
+      {
+        "word": "In",
+        "start": 31.92,
+        "end": 32.28,
+        "emphasized": false
+      },
+      {
+        "word": "this",
+        "start": 32.28,
+        "end": 32.58,
+        "emphasized": false
+      },
+      {
+        "word": "demo,",
+        "start": 32.58,
+        "end": 32.86,
+        "emphasized": false
+      },
+      {
+        "word": "you",
+        "start": 33.12,
+        "end": 33.18,
+        "emphasized": false
+      },
+      {
+        "word": "will",
+        "start": 33.18,
+        "end": 33.34,
+        "emphasized": false
+      },
+      {
+        "word": "see",
+        "start": 33.34,
+        "end": 33.52,
+        "emphasized": false
+      },
+      {
+        "word": "a",
+        "start": 33.52,
+        "end": 33.76,
+        "emphasized": false
+      },
+      {
+        "word": "system",
+        "start": 33.76,
+        "end": 34.16,
+        "emphasized": false
+      },
+      {
+        "word": "that",
+        "start": 34.16,
+        "end": 34.5,
+        "emphasized": false
+      },
+      {
+        "word": "automatically",
+        "start": 34.5,
+        "end": 35.28,
+        "emphasized": true
+      },
+      {
+        "word": "generates",
+        "start": 35.28,
+        "end": 36.12,
+        "emphasized": true
+      },
+      {
+        "word": "captions,",
+        "start": 36.12,
+        "end": 36.68,
+        "emphasized": true
+      },
+      {
+        "word": "highlight",
+        "start": 37.22,
+        "end": 37.4,
+        "emphasized": false
+      },
+      {
+        "word": "key",
+        "start": 37.4,
+        "end": 37.88,
+        "emphasized": true
+      },
+      {
+        "word": "ideas",
+        "start": 37.88,
+        "end": 38.22,
+        "emphasized": false
+      },
+      {
+        "word": "and",
+        "start": 38.22,
+        "end": 38.68,
+        "emphasized": true
+      },
+      {
+        "word": "applies",
+        "start": 38.68,
+        "end": 38.98,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 38.98,
+    "end": 41.58,
+    "words": [
+      {
+        "word": "animations",
+        "start": 38.98,
+        "end": 39.58,
+        "emphasized": true
+      },
+      {
+        "word": "without",
+        "start": 39.58,
+        "end": 40.42,
+        "emphasized": true
+      },
+      {
+        "word": "using",
+        "start": 40.42,
+        "end": 40.94,
+        "emphasized": true
+      },
+      {
+        "word": "any",
+        "start": 40.94,
+        "end": 41.18,
+        "emphasized": false
+      },
+      {
+        "word": "timeline.",
+        "start": 41.18,
+        "end": 41.58,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 42.34,
+    "end": 44.2,
+    "words": [
+      {
+        "word": "And",
+        "start": 42.34,
+        "end": 42.68,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 42.68,
+        "end": 42.8,
+        "emphasized": false
+      },
+      {
+        "word": "most",
+        "start": 42.8,
+        "end": 43.1,
+        "emphasized": false
+      },
+      {
+        "word": "interesting",
+        "start": 43.1,
+        "end": 43.38,
+        "emphasized": false
+      },
+      {
+        "word": "part",
+        "start": 43.38,
+        "end": 43.8,
+        "emphasized": false
+      },
+      {
+        "word": "is",
+        "start": 43.8,
+        "end": 44.04,
+        "emphasized": false
+      },
+      {
+        "word": "this.",
+        "start": 44.04,
+        "end": 44.2,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 44.68,
+    "end": 47.88,
+    "words": [
+      {
+        "word": "You",
+        "start": 44.68,
+        "end": 44.76,
+        "emphasized": false
+      },
+      {
+        "word": "can",
+        "start": 44.76,
+        "end": 44.88,
+        "emphasized": false
+      },
+      {
+        "word": "change",
+        "start": 44.88,
+        "end": 45.14,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 45.14,
+        "end": 45.36,
+        "emphasized": false
+      },
+      {
+        "word": "result",
+        "start": 45.36,
+        "end": 45.6,
+        "emphasized": false
+      },
+      {
+        "word": "just",
+        "start": 45.6,
+        "end": 46.02,
+        "emphasized": false
+      },
+      {
+        "word": "by",
+        "start": 46.02,
+        "end": 46.24,
+        "emphasized": false
+      },
+      {
+        "word": "typing",
+        "start": 46.24,
+        "end": 46.74,
+        "emphasized": true
+      },
+      {
+        "word": "a",
+        "start": 46.74,
+        "end": 46.98,
+        "emphasized": false
+      },
+      {
+        "word": "simple",
+        "start": 46.98,
+        "end": 47.3,
+        "emphasized": false
+      },
+      {
+        "word": "sentence.",
+        "start": 47.3,
+        "end": 47.88,
+        "emphasized": true
+      }
+    ]
+  },
+  {
+    "start": 48.28,
+    "end": 54.26,
+    "words": [
+      {
+        "word": "For",
+        "start": 48.28,
+        "end": 48.36,
+        "emphasized": false
+      },
+      {
+        "word": "example,",
+        "start": 48.36,
+        "end": 48.68,
+        "emphasized": false
+      },
+      {
+        "word": "I",
+        "start": 49.0,
+        "end": 49.14,
+        "emphasized": true
+      },
+      {
+        "word": "can",
+        "start": 49.14,
+        "end": 49.3,
+        "emphasized": false
+      },
+      {
+        "word": "remove",
+        "start": 49.3,
+        "end": 49.6,
+        "emphasized": false
+      },
+      {
+        "word": "animations",
+        "start": 49.6,
+        "end": 50.16,
+        "emphasized": true
+      },
+      {
+        "word": "or",
+        "start": 50.16,
+        "end": 50.72,
+        "emphasized": true
+      },
+      {
+        "word": "mac",
+        "start": 50.72,
+        "end": 50.98,
+        "emphasized": false
+      },
+      {
+        "word": "captions",
+        "start": 50.98,
+        "end": 51.42,
+        "emphasized": false
+      },
+      {
+        "word": "bolder",
+        "start": 51.42,
+        "end": 52.18,
+        "emphasized": true
+      },
+      {
+        "word": "without",
+        "start": 52.18,
+        "end": 52.86,
+        "emphasized": true
+      },
+      {
+        "word": "touching",
+        "start": 52.86,
+        "end": 53.26,
+        "emphasized": false
+      },
+      {
+        "word": "the",
+        "start": 53.26,
+        "end": 53.46,
+        "emphasized": false
+      },
+      {
+        "word": "video",
+        "start": 53.46,
+        "end": 53.74,
+        "emphasized": false
+      },
+      {
+        "word": "at",
+        "start": 53.74,
+        "end": 53.96,
+        "emphasized": false
+      },
+      {
+        "word": "all.",
+        "start": 53.96,
+        "end": 54.26,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 54.26,
+    "end": 58.0,
+    "words": [
+      {
+        "word": "This",
+        "start": 54.26,
+        "end": 55.24,
+        "emphasized": true
+      },
+      {
+        "word": "is",
+        "start": 55.24,
+        "end": 55.4,
+        "emphasized": false
+      },
+      {
+        "word": "what",
+        "start": 55.4,
+        "end": 55.7,
+        "emphasized": false
+      },
+      {
+        "word": "automation",
+        "start": 55.7,
+        "end": 56.32,
+        "emphasized": true
+      },
+      {
+        "word": "first",
+        "start": 56.32,
+        "end": 56.76,
+        "emphasized": false
+      },
+      {
+        "word": "video",
+        "start": 56.76,
+        "end": 57.06,
+        "emphasized": false
+      },
+      {
+        "word": "editing",
+        "start": 57.06,
+        "end": 57.32,
+        "emphasized": false
+      },
+      {
+        "word": "looks",
+        "start": 57.32,
+        "end": 57.66,
+        "emphasized": false
+      },
+      {
+        "word": "like.",
+        "start": 57.66,
+        "end": 58.0,
+        "emphasized": false
+      }
+    ]
+  },
+  {
+    "start": 58.34,
+    "end": 58.88,
     "words": [
       {
         "word": "Thank",
-        "start": 17.08,
-        "end": 17.2,
+        "start": 58.34,
+        "end": 58.62,
         "emphasized": false
       },
       {
         "word": "you.",
-        "start": 17.2,
-        "end": 17.48,
+        "start": 58.62,
+        "end": 58.88,
         "emphasized": false
       }
     ]

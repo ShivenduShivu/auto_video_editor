@@ -1,12 +1,14 @@
 import subprocess
 import os
 
-INPUT_VIDEO = "../input_video/raw.mp4"
-OUTPUT_AUDIO = "audio.wav"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+INPUT_VIDEO = os.path.join(BASE_DIR, "../input_video/raw.mp4")
+OUTPUT_AUDIO = os.path.join(BASE_DIR, "audio.wav")
 
 def extract_audio():
     if not os.path.exists(INPUT_VIDEO):
-        raise FileNotFoundError("Input video not found")
+        raise FileNotFoundError(f"Input video not found at {INPUT_VIDEO}")
 
     command = [
         "ffmpeg",

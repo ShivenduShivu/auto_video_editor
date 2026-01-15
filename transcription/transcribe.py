@@ -1,8 +1,11 @@
+import os
 import whisper
 import json
 
-AUDIO_PATH = "../audio_processing/audio.wav"
-OUTPUT_JSON = "transcript.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+AUDIO_PATH = os.path.join(BASE_DIR, "../audio_processing/audio.wav")
+OUTPUT_JSON = os.path.join(BASE_DIR, "transcript.json")
 
 def transcribe():
     model = whisper.load_model("base")

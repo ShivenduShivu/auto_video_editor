@@ -1,8 +1,10 @@
+import os
 import json
 
-SEGMENTS_PATH = "../segmentation/segments.json"
-CAPTIONS_PATH = "../caption_engine/captions.json"
-OUTPUT_PATH = "visual_decisions.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+SEGMENTS_PATH = os.path.join(BASE_DIR, "../segmentation/segments.json")
+OUTPUT_PATH = os.path.join(BASE_DIR, "visual_decisions.json")
 
 TITLE_PAUSE_THRESHOLD = 1.2
 LONG_SEGMENT_THRESHOLD = 6
@@ -16,39 +18,19 @@ def generate_visual_decisions(segments):
     decisions = []
 
     for i, segment in enumerate(segments):
-        segment_duration = segment["end"] - segment["start"]
-        emphasized_words = [
-            w for w in segment["words"] if w.get("emphasized")
-        ]
-
-        add_title = False
-        add_emphasis = False
-        add_overlay = False
-
-        if i == 0:
-            add_title = True
-        elif segment["start"] - segments[i-1]["end"] >= TITLE_PAUSE_THRESHOLD:
-            add_title = True
-
-        if len(emphasized_words) >= EMPHASIS_WORD_THRESHOLD:
-            add_emphasis = True
-        if segment_duration >= 5:
-            add_emphasis = True
-
-        if segment_duration >= LONG_SEGMENT_THRESHOLD:
-            add_overlay = True
+        duration = segment["end"] - segment["start"]
+        emphasized = [w for w in segment["words"] if w.get("emphasized")]
 
         decisions.append({
             "segment_index": i,
             "start": segment["start"],
             "end": segment["end"],
-            "title": add_title,
-            "emphasis": add_emphasis,
-            "overlay": add_overlay,
+            "title": i == 0,
+            "emphasis": len(emphasized) >= EMPHASIS_WORD_THRESHOLD or duration >= 5,
+            "overlay": duration >= LONG_SEGMENT_THRESHOLD,
             "reasoning": {
-                "long_pause": i > 0 and segment["start"] - segments[i-1]["end"] >= TITLE_PAUSE_THRESHOLD,
-                "emphasized_words": len(emphasized_words),
-                "segment_duration": round(segment_duration, 2)
+                "emphasized_words": len(emphasized),
+                "segment_duration": round(duration, 2)
             }
         })
 

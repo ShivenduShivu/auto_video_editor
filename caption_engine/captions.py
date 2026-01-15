@@ -1,8 +1,11 @@
+import os
 import json
 import math
 
-INPUT_PATH = "../segmentation/segments.json"
-OUTPUT_PATH = "captions.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+INPUT_PATH = os.path.join(BASE_DIR, "../segmentation/segments.json")
+OUTPUT_PATH = os.path.join(BASE_DIR, "captions.json")
 
 MAX_WORDS_PER_CAPTION = 7
 
@@ -13,34 +16,27 @@ def load_segments():
 def generate_captions(segments):
     captions = []
 
-    for seg_idx, segment in enumerate(segments):
+    for segment in segments:
         words = segment["words"]
-        segment_start = segment["start"]
-        segment_end = segment["end"]
-
-        total_words = len(words)
-        chunks = math.ceil(total_words / MAX_WORDS_PER_CAPTION)
+        chunks = math.ceil(len(words) / MAX_WORDS_PER_CAPTION)
 
         for i in range(chunks):
-            chunk_words = words[i*MAX_WORDS_PER_CAPTION:(i+1)*MAX_WORDS_PER_CAPTION]
+            chunk = words[i*MAX_WORDS_PER_CAPTION:(i+1)*MAX_WORDS_PER_CAPTION]
 
-            caption_text = " ".join([w["word"] for w in chunk_words])
-
-            emphasized_words = [
-                w["word"] for w in chunk_words if w.get("emphasized")
-            ]
+            text = " ".join(w["word"] for w in chunk)
+            highlights = [w["word"] for w in chunk if w.get("emphasized")]
 
             animation = "fade"
             if i == 0:
                 animation = "fade_in"
-            if emphasized_words:
+            if highlights:
                 animation = "pop"
 
             captions.append({
-                "start": chunk_words[0]["start"],
-                "end": chunk_words[-1]["end"],
-                "text": caption_text,
-                "highlight": emphasized_words,
+                "start": chunk[0]["start"],
+                "end": chunk[-1]["end"],
+                "text": text,
+                "highlight": highlights,
                 "animation": animation
             })
 

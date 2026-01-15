@@ -1,0 +1,19 @@
+# Core
+python>=3.9
+
+# Audio / Video
+ffmpeg-python
+moviepy==1.0.3
+imageio
+imageio-ffmpeg
+
+# AI / Speech
+openai-whisper
+torch
+
+# NLP / Utilities
+numpy
+tqdm
+
+# Image rendering
+Pillow

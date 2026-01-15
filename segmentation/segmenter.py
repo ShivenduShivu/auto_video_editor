@@ -1,11 +1,14 @@
+import os
 import json
 from statistics import mean
 
-INPUT_PATH = "../transcription/transcript.json"
-OUTPUT_PATH = "segments.json"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
-PAUSE_THRESHOLD = 0.7      # seconds
-MAX_SEGMENT_DURATION = 7  # seconds
+INPUT_PATH = os.path.join(BASE_DIR, "../transcription/transcript.json")
+OUTPUT_PATH = os.path.join(BASE_DIR, "segments.json")
+
+PAUSE_THRESHOLD = 0.7
+MAX_SEGMENT_DURATION = 7
 
 STRONG_KEYWORDS = {
     "important", "key", "critical", "remember",
@@ -36,11 +39,9 @@ def detect_segments(words):
             emphasized = True
 
         word["emphasized"] = emphasized
-
         current_segment.append(word)
 
-        is_last = i == len(words) - 1
-        if not is_last:
+        if i < len(words) - 1:
             pause = words[i + 1]["start"] - word["end"]
             segment_duration = word["end"] - segment_start_time
 

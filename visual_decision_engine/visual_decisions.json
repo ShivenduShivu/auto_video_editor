@@ -2,66 +2,157 @@
   {
     "segment_index": 0,
     "start": 0.0,
-    "end": 4.36,
+    "end": 2.72,
     "title": true,
     "emphasis": true,
     "overlay": false,
     "reasoning": {
-      "long_pause": false,
-      "emphasized_words": 5,
-      "segment_duration": 4.36
+      "emphasized_words": 3,
+      "segment_duration": 2.72
     }
   },
   {
     "segment_index": 1,
-    "start": 4.8,
-    "end": 9.46,
+    "start": 3.1,
+    "end": 5.88,
     "title": false,
     "emphasis": true,
     "overlay": false,
     "reasoning": {
-      "long_pause": false,
-      "emphasized_words": 4,
-      "segment_duration": 4.66
+      "emphasized_words": 3,
+      "segment_duration": 2.78
     }
   },
   {
     "segment_index": 2,
-    "start": 10.06,
-    "end": 12.88,
+    "start": 6.5,
+    "end": 12.3,
     "title": false,
-    "emphasis": false,
+    "emphasis": true,
     "overlay": false,
     "reasoning": {
-      "long_pause": false,
-      "emphasized_words": 0,
-      "segment_duration": 2.82
+      "emphasized_words": 6,
+      "segment_duration": 5.8
     }
   },
   {
     "segment_index": 3,
-    "start": 13.78,
-    "end": 16.62,
+    "start": 13.62,
+    "end": 19.92,
     "title": false,
-    "emphasis": false,
-    "overlay": false,
+    "emphasis": true,
+    "overlay": true,
     "reasoning": {
-      "long_pause": false,
-      "emphasized_words": 0,
-      "segment_duration": 2.84
+      "emphasized_words": 4,
+      "segment_duration": 6.3
     }
   },
   {
     "segment_index": 4,
-    "start": 17.08,
-    "end": 17.48,
+    "start": 20.62,
+    "end": 25.82,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 3,
+      "segment_duration": 5.2
+    }
+  },
+  {
+    "segment_index": 5,
+    "start": 26.7,
+    "end": 31.3,
     "title": false,
     "emphasis": false,
     "overlay": false,
     "reasoning": {
-      "long_pause": false,
+      "emphasized_words": 1,
+      "segment_duration": 4.6
+    }
+  },
+  {
+    "segment_index": 6,
+    "start": 31.92,
+    "end": 38.98,
+    "title": false,
+    "emphasis": true,
+    "overlay": true,
+    "reasoning": {
+      "emphasized_words": 5,
+      "segment_duration": 7.06
+    }
+  },
+  {
+    "segment_index": 7,
+    "start": 38.98,
+    "end": 41.58,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 3,
+      "segment_duration": 2.6
+    }
+  },
+  {
+    "segment_index": 8,
+    "start": 42.34,
+    "end": 44.2,
+    "title": false,
+    "emphasis": false,
+    "overlay": false,
+    "reasoning": {
       "emphasized_words": 0,
-      "segment_duration": 0.4
+      "segment_duration": 1.86
+    }
+  },
+  {
+    "segment_index": 9,
+    "start": 44.68,
+    "end": 47.88,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 2,
+      "segment_duration": 3.2
+    }
+  },
+  {
+    "segment_index": 10,
+    "start": 48.28,
+    "end": 54.26,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 5,
+      "segment_duration": 5.98
+    }
+  },
+  {
+    "segment_index": 11,
+    "start": 54.26,
+    "end": 58.0,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 2,
+      "segment_duration": 3.74
+    }
+  },
+  {
+    "segment_index": 12,
+    "start": 58.34,
+    "end": 58.88,
+    "title": false,
+    "emphasis": false,
+    "overlay": false,
+    "reasoning": {
+      "emphasized_words": 0,
+      "segment_duration": 0.54
     }
   }
 ]

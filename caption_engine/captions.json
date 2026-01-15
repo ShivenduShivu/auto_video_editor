@@ -1,76 +1,229 @@
 [
   {
     "start": 0.0,
-    "end": 2.98,
-    "text": "Hello everyone, today I am demonstrating an",
+    "end": 2.72,
+    "text": "Hi everyone, I am Sivindu.",
     "highlight": [
-      "Hello",
+      "Hi",
       "I",
-      "demonstrating"
+      "Sivindu."
     ],
     "animation": "pop"
   },
   {
-    "start": 2.98,
-    "end": 4.36,
-    "text": "automatic video editor.",
+    "start": 3.1,
+    "end": 5.16,
+    "text": "Today I want to show you something",
     "highlight": [
-      "automatic",
-      "video"
+      "Today",
+      "I"
     ],
     "animation": "pop"
   },
   {
-    "start": 4.8,
-    "end": 7.3,
-    "text": "It uses artificial intelligence to add captions,",
+    "start": 5.16,
+    "end": 5.88,
+    "text": "important.",
     "highlight": [
-      "artificial",
-      "intelligence"
+      "important."
     ],
     "animation": "pop"
   },
   {
-    "start": 7.62,
-    "end": 9.46,
-    "text": "detect infectious and create animations.",
+    "start": 6.5,
+    "end": 8.82,
+    "text": "Most people think video editing is about",
     "highlight": [
-      "infectious",
-      "animations."
+      "video",
+      "is"
     ],
     "animation": "pop"
   },
   {
-    "start": 10.06,
-    "end": 12.04,
-    "text": "This system can save hours of manual",
+    "start": 8.82,
+    "end": 12.3,
+    "text": "timelines, keyframes and complicated software.",
+    "highlight": [
+      "timelines,",
+      "and",
+      "complicated",
+      "software."
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 13.62,
+    "end": 15.74,
+    "text": "But the truth is, when you record",
     "highlight": [],
     "animation": "fade_in"
   },
   {
-    "start": 12.04,
-    "end": 12.88,
-    "text": "editing work.",
+    "start": 15.74,
+    "end": 18.5,
+    "text": "talking head video, all the information is",
+    "highlight": [
+      "talking",
+      "information"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 18.5,
+    "end": 19.92,
+    "text": "already in your voice.",
+    "highlight": [
+      "already",
+      "voice."
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 20.62,
+    "end": 24.02,
+    "text": "The words, the pauses, the emphasis already",
+    "highlight": [
+      "pauses,",
+      "already"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 24.02,
+    "end": 25.82,
+    "text": "describes how the video should look.",
+    "highlight": [
+      "describes"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 26.7,
+    "end": 29.54,
+    "text": "So, instead of manually editing videos, what",
+    "highlight": [
+      "videos,"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 29.54,
+    "end": 31.3,
+    "text": "if the editor could decide for you?",
     "highlight": [],
     "animation": "fade"
   },
   {
-    "start": 13.78,
-    "end": 15.96,
-    "text": "The scene learning max video production faster",
+    "start": 31.92,
+    "end": 33.76,
+    "text": "In this demo, you will see a",
     "highlight": [],
     "animation": "fade_in"
   },
   {
-    "start": 15.96,
-    "end": 16.62,
-    "text": "and easier.",
+    "start": 33.76,
+    "end": 37.88,
+    "text": "system that automatically generates captions, highlight key",
+    "highlight": [
+      "automatically",
+      "generates",
+      "captions,",
+      "key"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 37.88,
+    "end": 38.98,
+    "text": "ideas and applies",
+    "highlight": [
+      "and"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 38.98,
+    "end": 41.58,
+    "text": "animations without using any timeline.",
+    "highlight": [
+      "animations",
+      "without",
+      "using"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 42.34,
+    "end": 44.2,
+    "text": "And the most interesting part is this.",
+    "highlight": [],
+    "animation": "fade_in"
+  },
+  {
+    "start": 44.68,
+    "end": 46.24,
+    "text": "You can change the result just by",
+    "highlight": [],
+    "animation": "fade_in"
+  },
+  {
+    "start": 46.24,
+    "end": 47.88,
+    "text": "typing a simple sentence.",
+    "highlight": [
+      "typing",
+      "sentence."
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 48.28,
+    "end": 50.72,
+    "text": "For example, I can remove animations or",
+    "highlight": [
+      "I",
+      "animations",
+      "or"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 50.72,
+    "end": 53.74,
+    "text": "mac captions bolder without touching the video",
+    "highlight": [
+      "bolder",
+      "without"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 53.74,
+    "end": 54.26,
+    "text": "at all.",
     "highlight": [],
     "animation": "fade"
   },
   {
-    "start": 17.08,
-    "end": 17.48,
+    "start": 54.26,
+    "end": 57.32,
+    "text": "This is what automation first video editing",
+    "highlight": [
+      "This",
+      "automation"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 57.32,
+    "end": 58.0,
+    "text": "looks like.",
+    "highlight": [],
+    "animation": "fade"
+  },
+  {
+    "start": 58.34,
+    "end": 58.88,
     "text": "Thank you.",
     "highlight": [],
     "animation": "fade_in"
