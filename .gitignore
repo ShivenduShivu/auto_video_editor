@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Audio / Video outputs
+*.wav
+*.mp4
+*.mov
+
+# Whisper / Torch cache
+.cache/
+torch_cache/
+
+# OS
+.DS_Store
+Thumbs.db

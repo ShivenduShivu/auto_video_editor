@@ -1,0 +1,212 @@
+[
+  {
+    "word": "Hello",
+    "start": 0.0,
+    "end": 0.96
+  },
+  {
+    "word": "everyone,",
+    "start": 0.96,
+    "end": 1.36
+  },
+  {
+    "word": "today",
+    "start": 1.72,
+    "end": 1.9
+  },
+  {
+    "word": "I",
+    "start": 1.9,
+    "end": 2.06
+  },
+  {
+    "word": "am",
+    "start": 2.06,
+    "end": 2.16
+  },
+  {
+    "word": "demonstrating",
+    "start": 2.16,
+    "end": 2.74
+  },
+  {
+    "word": "an",
+    "start": 2.74,
+    "end": 2.98
+  },
+  {
+    "word": "automatic",
+    "start": 2.98,
+    "end": 3.54
+  },
+  {
+    "word": "video",
+    "start": 3.54,
+    "end": 4.02
+  },
+  {
+    "word": "editor.",
+    "start": 4.02,
+    "end": 4.36
+  },
+  {
+    "word": "It",
+    "start": 4.8,
+    "end": 4.9
+  },
+  {
+    "word": "uses",
+    "start": 4.9,
+    "end": 5.26
+  },
+  {
+    "word": "artificial",
+    "start": 5.26,
+    "end": 5.94
+  },
+  {
+    "word": "intelligence",
+    "start": 5.94,
+    "end": 6.44
+  },
+  {
+    "word": "to",
+    "start": 6.44,
+    "end": 6.74
+  },
+  {
+    "word": "add",
+    "start": 6.74,
+    "end": 6.88
+  },
+  {
+    "word": "captions,",
+    "start": 6.88,
+    "end": 7.3
+  },
+  {
+    "word": "detect",
+    "start": 7.62,
+    "end": 7.9
+  },
+  {
+    "word": "infectious",
+    "start": 7.9,
+    "end": 8.36
+  },
+  {
+    "word": "and",
+    "start": 8.36,
+    "end": 8.68
+  },
+  {
+    "word": "create",
+    "start": 8.68,
+    "end": 8.92
+  },
+  {
+    "word": "animations.",
+    "start": 8.92,
+    "end": 9.46
+  },
+  {
+    "word": "This",
+    "start": 10.06,
+    "end": 10.46
+  },
+  {
+    "word": "system",
+    "start": 10.46,
+    "end": 10.8
+  },
+  {
+    "word": "can",
+    "start": 10.8,
+    "end": 10.94
+  },
+  {
+    "word": "save",
+    "start": 10.94,
+    "end": 11.2
+  },
+  {
+    "word": "hours",
+    "start": 11.2,
+    "end": 11.58
+  },
+  {
+    "word": "of",
+    "start": 11.58,
+    "end": 11.82
+  },
+  {
+    "word": "manual",
+    "start": 11.82,
+    "end": 12.04
+  },
+  {
+    "word": "editing",
+    "start": 12.04,
+    "end": 12.44
+  },
+  {
+    "word": "work.",
+    "start": 12.44,
+    "end": 12.88
+  },
+  {
+    "word": "The",
+    "start": 13.78,
+    "end": 13.9
+  },
+  {
+    "word": "scene",
+    "start": 13.9,
+    "end": 14.06
+  },
+  {
+    "word": "learning",
+    "start": 14.06,
+    "end": 14.38
+  },
+  {
+    "word": "max",
+    "start": 14.38,
+    "end": 14.78
+  },
+  {
+    "word": "video",
+    "start": 14.78,
+    "end": 15.12
+  },
+  {
+    "word": "production",
+    "start": 15.12,
+    "end": 15.54
+  },
+  {
+    "word": "faster",
+    "start": 15.54,
+    "end": 15.96
+  },
+  {
+    "word": "and",
+    "start": 15.96,
+    "end": 16.26
+  },
+  {
+    "word": "easier.",
+    "start": 16.26,
+    "end": 16.62
+  },
+  {
+    "word": "Thank",
+    "start": 17.08,
+    "end": 17.2
+  },
+  {
+    "word": "you.",
+    "start": 17.2,
+    "end": 17.48
+  }
+]
