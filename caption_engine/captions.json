@@ -1,0 +1,78 @@
+[
+  {
+    "start": 0.0,
+    "end": 2.98,
+    "text": "Hello everyone, today I am demonstrating an",
+    "highlight": [
+      "Hello",
+      "I",
+      "demonstrating"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 2.98,
+    "end": 4.36,
+    "text": "automatic video editor.",
+    "highlight": [
+      "automatic",
+      "video"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 4.8,
+    "end": 7.3,
+    "text": "It uses artificial intelligence to add captions,",
+    "highlight": [
+      "artificial",
+      "intelligence"
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 7.62,
+    "end": 9.46,
+    "text": "detect infectious and create animations.",
+    "highlight": [
+      "infectious",
+      "animations."
+    ],
+    "animation": "pop"
+  },
+  {
+    "start": 10.06,
+    "end": 12.04,
+    "text": "This system can save hours of manual",
+    "highlight": [],
+    "animation": "fade_in"
+  },
+  {
+    "start": 12.04,
+    "end": 12.88,
+    "text": "editing work.",
+    "highlight": [],
+    "animation": "fade"
+  },
+  {
+    "start": 13.78,
+    "end": 15.96,
+    "text": "The scene learning max video production faster",
+    "highlight": [],
+    "animation": "fade_in"
+  },
+  {
+    "start": 15.96,
+    "end": 16.62,
+    "text": "and easier.",
+    "highlight": [],
+    "animation": "fade"
+  },
+  {
+    "start": 17.08,
+    "end": 17.48,
+    "text": "Thank you.",
+    "highlight": [],
+    "animation": "fade_in"
+  }
+]
