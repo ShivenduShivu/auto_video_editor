@@ -1,0 +1,15 @@
+{
+  "caption_style": {
+    "bold": true
+  },
+  "animations": {
+    "enabled": false,
+    "default": "fade"
+  },
+  "emphasis": {
+    "min_emphasized_words": 2
+  },
+  "overlays": {
+    "enabled": true
+  }
+}
