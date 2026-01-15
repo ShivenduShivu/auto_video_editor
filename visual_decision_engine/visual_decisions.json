@@ -1,0 +1,67 @@
+[
+  {
+    "segment_index": 0,
+    "start": 0.0,
+    "end": 4.36,
+    "title": true,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "long_pause": false,
+      "emphasized_words": 5,
+      "segment_duration": 4.36
+    }
+  },
+  {
+    "segment_index": 1,
+    "start": 4.8,
+    "end": 9.46,
+    "title": false,
+    "emphasis": true,
+    "overlay": false,
+    "reasoning": {
+      "long_pause": false,
+      "emphasized_words": 4,
+      "segment_duration": 4.66
+    }
+  },
+  {
+    "segment_index": 2,
+    "start": 10.06,
+    "end": 12.88,
+    "title": false,
+    "emphasis": false,
+    "overlay": false,
+    "reasoning": {
+      "long_pause": false,
+      "emphasized_words": 0,
+      "segment_duration": 2.82
+    }
+  },
+  {
+    "segment_index": 3,
+    "start": 13.78,
+    "end": 16.62,
+    "title": false,
+    "emphasis": false,
+    "overlay": false,
+    "reasoning": {
+      "long_pause": false,
+      "emphasized_words": 0,
+      "segment_duration": 2.84
+    }
+  },
+  {
+    "segment_index": 4,
+    "start": 17.08,
+    "end": 17.48,
+    "title": false,
+    "emphasis": false,
+    "overlay": false,
+    "reasoning": {
+      "long_pause": false,
+      "emphasized_words": 0,
+      "segment_duration": 0.4
+    }
+  }
+]
