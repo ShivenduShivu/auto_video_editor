@@ -43,3 +43,5 @@ torch_cache/
 
 # Ignore all JSON files
 *.json
+# ignore .env
+.env
