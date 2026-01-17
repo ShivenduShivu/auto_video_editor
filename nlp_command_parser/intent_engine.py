@@ -11,7 +11,7 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 SYSTEM_PROMPT = """
 You are an AI video editor.
 
-Your task is to convert a user's natural language command into
+Convert a user's natural language command into
 STRUCTURED EDITING INTENTS for an automated video editor.
 
 Return STRICT JSON ONLY. No explanations. No markdown.
@@ -34,6 +34,15 @@ B-ROLL refers to:
 - overlays
 - extra visuals
 - supporting visuals
+
+ANIMATIONS refer to:
+- motion
+- transitions
+- effects
+- movement
+- fade
+- slide
+- pop
 
 -----------------
 OUTPUT SCHEMA
@@ -71,14 +80,19 @@ BROLL_POSITION_CHANGE
 BROLL_ENABLE_DISABLE
   enabled: true | false
 
+ANIMATION_ENABLE_DISABLE
+  enabled: true | false
+
+ANIMATION_STYLE_CHANGE
+  style: fade | slide | pop
+
 -----------------
 RULES
 -----------------
 
-- Extract ALL intents present in the command
 - One command may contain MULTIPLE intents
 - Use semantic meaning, not keywords
-- If an intent is unclear, omit it
+- Omit unclear intents
 - confidence reflects overall understanding (0–1)
 """
 
@@ -95,7 +109,7 @@ def extract_intent(command: str) -> dict:
         raw = response.output_text.strip()
         parsed = json.loads(raw)
 
-        if not isinstance(parsed.get("intents", None), list):
+        if not isinstance(parsed.get("intents"), list):
             raise ValueError("Invalid intent schema")
 
         return parsed

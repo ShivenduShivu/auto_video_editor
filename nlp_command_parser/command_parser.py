@@ -57,6 +57,17 @@ def apply_intents(state, payload):
                 "enabled", state["broll"]["enabled"]
             )
 
+        # ----- GLOBAL ANIMATIONS -----
+        elif intent == "ANIMATION_ENABLE_DISABLE":
+            state["animations"]["enabled"] = slots.get(
+                "enabled", state["animations"]["enabled"]
+            )
+
+        elif intent == "ANIMATION_STYLE_CHANGE":
+            state["animations"]["default"] = slots.get(
+                "style", state["animations"]["default"]
+            )
+
     return state
 
 def parse_command(command: str):
