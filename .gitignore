@@ -40,3 +40,6 @@ torch_cache/
 # Logs
 # ===============================
 *.log
+
+# Ignore all JSON files
+*.json
