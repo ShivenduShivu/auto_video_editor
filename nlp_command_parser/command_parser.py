@@ -57,7 +57,7 @@ def apply_intents(state, payload):
                 "enabled", state["broll"]["enabled"]
             )
 
-        # ----- GLOBAL ANIMATIONS -----
+        # ----- ANIMATIONS -----
         elif intent == "ANIMATION_ENABLE_DISABLE":
             state["animations"]["enabled"] = slots.get(
                 "enabled", state["animations"]["enabled"]
@@ -66,6 +66,17 @@ def apply_intents(state, payload):
         elif intent == "ANIMATION_STYLE_CHANGE":
             state["animations"]["default"] = slots.get(
                 "style", state["animations"]["default"]
+            )
+
+        # ----- OVERLAYS -----
+        elif intent == "OVERLAY_ENABLE_DISABLE":
+            state["overlays"]["enabled"] = slots.get(
+                "enabled", state["overlays"]["enabled"]
+            )
+
+        elif intent == "OVERLAY_MODE_CHANGE":
+            state["overlays"]["mode"] = slots.get(
+                "mode", state["overlays"].get("mode", "auto")
             )
 
     return state

@@ -3,7 +3,6 @@ import json
 from openai import OpenAI
 from dotenv import load_dotenv
 
-# Explicit .env loading (Python 3.13 safe)
 load_dotenv(dotenv_path=os.path.join(os.path.dirname(__file__), "..", ".env"))
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -43,6 +42,13 @@ ANIMATIONS refer to:
 - fade
 - slide
 - pop
+
+OVERLAYS refer to:
+- background boxes
+- caption background
+- translucent blocks
+- highlight bars
+- black background behind text
 
 -----------------
 OUTPUT SCHEMA
@@ -85,6 +91,12 @@ ANIMATION_ENABLE_DISABLE
 
 ANIMATION_STYLE_CHANGE
   style: fade | slide | pop
+
+OVERLAY_ENABLE_DISABLE
+  enabled: true | false
+
+OVERLAY_MODE_CHANGE
+  mode: always | auto | minimal
 
 -----------------
 RULES
