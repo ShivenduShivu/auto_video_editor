@@ -1,62 +1,44 @@
-import os
 import json
-import math
+import os
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
+CAPTION_DIR = os.path.join(PROJECT_ROOT, "caption_engine")
+SEGMENTS_PATH = os.path.join(PROJECT_ROOT, "segmentation", "segments.json")
+OUTPUT_PATH = os.path.join(CAPTION_DIR, "captions.json")
 
-INPUT_PATH = os.path.join(BASE_DIR, "../segmentation/segments.json")
-OUTPUT_PATH = os.path.join(BASE_DIR, "captions.json")
 
-MAX_WORDS_PER_CAPTION = 7
+def clear_old_translations():
+    """
+    Hackathon-safe cache invalidation:
+    Remove translated captions whenever a new video is processed.
+    """
+    for fname in os.listdir(CAPTION_DIR):
+        if fname.startswith("captions_") and fname != "captions.json":
+            path = os.path.join(CAPTION_DIR, fname)
+            os.remove(path)
+            print(f"🧹 Removed stale translated captions: {fname}")
 
-def load_segments():
-    with open(INPUT_PATH, "r", encoding="utf-8") as f:
-        return json.load(f)
-
-def segment_context(idx, total):
-    if idx == 0:
-        return "intro"
-    if idx == total - 1:
-        return "conclusion"
-    return "body"
-
-def generate_captions(segments):
-    captions = []
-    total_segments = len(segments)
-
-    for seg_idx, segment in enumerate(segments):
-        words = segment["words"]
-        context = segment_context(seg_idx, total_segments)
-
-        chunks = math.ceil(len(words) / MAX_WORDS_PER_CAPTION)
-
-        for i in range(chunks):
-            chunk = words[i*MAX_WORDS_PER_CAPTION:(i+1)*MAX_WORDS_PER_CAPTION]
-
-            word_items = []
-            for w in chunk:
-                word_items.append({
-                    "text": w["word"],
-                    "emphasis": bool(w.get("emphasized", False)),
-                    "context": context
-                })
-
-            captions.append({
-                "start": chunk[0]["start"],
-                "end": chunk[-1]["end"],
-                "words": word_items
-            })
-
-    return captions
 
 def main():
-    segments = load_segments()
-    captions = generate_captions(segments)
+    # 🔑 CRITICAL FIX: clear old translated captions
+    clear_old_translations()
+
+    with open(SEGMENTS_PATH, "r", encoding="utf-8") as f:
+        segments = json.load(f)
+
+    captions = []
+    for seg in segments:
+        captions.append({
+            "start": seg["start"],
+            "end": seg["end"],
+            "words": seg["words"]
+        })
 
     with open(OUTPUT_PATH, "w", encoding="utf-8") as f:
-        json.dump(captions, f, indent=2)
+        json.dump(captions, f, indent=2, ensure_ascii=False)
 
-    print(f"✅ Caption engine upgraded — {len(captions)} word-level captions generated")
+    print(f"✅ Caption engine complete — {len(captions)} segments written")
+
 
 if __name__ == "__main__":
     main()
