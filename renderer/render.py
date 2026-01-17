@@ -1,80 +1,126 @@
-import json
-import numpy as np
-from PIL import Image, ImageDraw, ImageFont
-from moviepy.editor import VideoFileClip, ImageClip, CompositeVideoClip
 import os
+import json
+import subprocess
+from moviepy.editor import (
+    VideoFileClip,
+    CompositeVideoClip,
+    TextClip,
+    ImageClip
+)
+from PIL import Image, ImageDraw, ImageFont
+import numpy as np
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
-VIDEO_PATH = os.path.join(BASE_DIR, "../input_video/raw.mp4")
-CAPTIONS_PATH = os.path.join(BASE_DIR, "../caption_engine/captions.json")
-STATE_PATH = os.path.join(BASE_DIR, "../nlp_command_parser/editor_state.json")
-OUTPUT_PATH = os.path.join(BASE_DIR, "output.mp4")
+VIDEO_PATH = os.path.join(PROJECT_ROOT, "input_video", "raw.mp4")
+CAPTIONS_DIR = os.path.join(PROJECT_ROOT, "caption_engine")
+STATE_PATH = os.path.join(PROJECT_ROOT, "nlp_command_parser", "editor_state.json")
+OUTPUT_PATH = os.path.join(PROJECT_ROOT, "renderer", "output.mp4")
+BASE_OUTPUT_PATH = os.path.join(PROJECT_ROOT, "renderer", "base.mp4")
 
 FONT_REGULAR = "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf"
 FONT_BOLD = "/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf"
 
-CONTEXT_COLORS = {
-    "intro": (255, 215, 0),        # warm yellow
-    "body": (255, 255, 255),       # white
-    "conclusion": (0, 255, 255)    # cyan
-}
 
 def load_json(path):
     with open(path, "r", encoding="utf-8") as f:
         return json.load(f)
 
-def render_caption_image(words, width, height):
-    img = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+
+def ensure_translated_captions():
+    state = load_json(STATE_PATH)
+    lang = state.get("captions", {}).get("language", "original")
+
+    if lang == "original":
+        return os.path.join(CAPTIONS_DIR, "captions.json")
+
+    translated = os.path.join(CAPTIONS_DIR, f"captions_{lang}.json")
+    if not os.path.exists(translated):
+        subprocess.run(
+            ["python", "translation/translate_captions.py"],
+            cwd=PROJECT_ROOT,
+            check=True
+        )
+    return translated
+
+
+# ---------- ENGLISH (PIL, word-level, kinetic) ----------
+def render_caption_image(words, width, bold):
+    img = Image.new("RGBA", (width, 120), (0, 0, 0, 0))
     draw = ImageDraw.Draw(img)
 
-    x_cursor = width // 2
-    y = height - 120
+    font_path = FONT_BOLD if bold else FONT_REGULAR
+    font = ImageFont.truetype(font_path, 40)
 
-    # measure total width first
-    temp_font = ImageFont.truetype(FONT_REGULAR, 40)
-    total_width = sum(draw.textlength(w["text"] + " ", font=temp_font) for w in words)
-    x_cursor -= int(total_width // 2)
-
+    x = 20
+    y = 40
     for w in words:
-        emphasized = w["emphasis"]
-        font = ImageFont.truetype(FONT_BOLD if emphasized else FONT_REGULAR, 40)
-        color = CONTEXT_COLORS.get(w["context"], (255, 255, 255))
+        color = (255, 215, 0, 255) if w.get("emphasis") else (255, 255, 255, 255)
+        draw.text((x, y), w["text"] + " ", font=font, fill=color)
+        x += int(font.getlength(w["text"] + " "))
 
-        draw.text((x_cursor, y), w["text"] + " ", font=font, fill=color)
-        x_cursor += draw.textlength(w["text"] + " ", font=font)
+    return img
 
-    return np.array(img)
 
-def create_caption_clip(caption, state, video_w, video_h):
-    img = render_caption_image(caption["words"], video_w, video_h)
-    clip = ImageClip(img, transparent=True)
-    clip = clip.set_start(caption["start"]).set_end(caption["end"])
-
-    if state["animations"]["enabled"]:
-        if any(w["emphasis"] for w in caption["words"]):
-            clip = clip.resize(lambda t: 1 + 0.04 * min(t, 0.15))
-
-    return clip
-
-def main():
-    video = VideoFileClip(VIDEO_PATH)
-    captions = load_json(CAPTIONS_PATH)
-    state = load_json(STATE_PATH)
-
-    overlays = [
-        create_caption_clip(c, state, video.w, video.h)
-        for c in captions
-    ]
-
-    final = CompositeVideoClip([video] + overlays)
-    final.write_videofile(
-        OUTPUT_PATH,
-        codec="libx264",
-        audio_codec="aac"
+# ---------- HINDI / TELUGU (TextClip, sentence-level) ----------
+def render_sentence_clip(text, start, end, video_w, video_h):
+    return (
+        TextClip(
+            text,
+            fontsize=48,
+            color="white",
+            method="pango",   # required for Indic scripts
+            size=(int(video_w * 0.9), None),
+            align="center"
+        )
+        .set_position(("center", video_h - 140))
+        .set_start(start)
+        .set_end(end)
     )
 
-    print("✅ Final video rendered with kinetic typography:", OUTPUT_PATH)
+
+def main():
+    state = load_json(STATE_PATH)
+    captions_path = ensure_translated_captions()
+    captions = load_json(captions_path)
+
+    video = VideoFileClip(VIDEO_PATH)
+
+    # Base render (no captions)
+    video.write_videofile(BASE_OUTPUT_PATH, codec="libx264", audio_codec="aac")
+    print(f"✅ Base video rendered: {BASE_OUTPUT_PATH}")
+
+    lang = state.get("captions", {}).get("language", "original")
+    overlays = []
+
+    for seg in captions:
+        start = seg["start"]
+        end = seg["end"]
+
+        if lang in ["hi", "te"]:
+            sentence = " ".join(w["text"] for w in seg["words"])
+            clip = render_sentence_clip(sentence, start, end, video.w, video.h)
+            overlays.append(clip)
+        else:
+            img = render_caption_image(
+                seg["words"],
+                video.w,
+                state["caption_style"].get("bold", False)
+            )
+
+            clip = (
+                ImageClip(np.array(img), ismask=False)
+                .set_start(start)
+                .set_end(end)
+                .set_position(("center", video.h - 140))
+            )
+            overlays.append(clip)
+
+    final = CompositeVideoClip([video] + overlays)
+    final.write_videofile(OUTPUT_PATH, codec="libx264", audio_codec="aac")
+
+    print(f"✅ Final video rendered with captions: {OUTPUT_PATH}")
+
 
 if __name__ == "__main__":
     main()

@@ -21,6 +21,10 @@ def load_editor_state():
     with open(STATE_PATH, "r", encoding="utf-8") as f:
         return json.load(f)
 
+def save_editor_state(state):
+    with open(STATE_PATH, "w", encoding="utf-8") as f:
+        json.dump(state, f, indent=2)
+
 # -------------------------------
 # Header
 # -------------------------------
@@ -58,7 +62,15 @@ if uploaded_file:
     st.success("✅ Video uploaded")
 
     if st.button("🚀 Run Automated Edit (Initial Render)"):
-        st.info("⏳ This runs the full pipeline once")
+        st.info("⏳ Running full pipeline (original language captions)")
+
+        # 🔑 CRITICAL FIX:
+        # Always reset language to ORIGINAL on initial render
+        state = load_editor_state()
+        state.setdefault("captions", {})
+        state["captions"]["language"] = "original"
+        save_editor_state(state)
+        st.session_state.editor_state = state
 
         progress = st.progress(0)
         status = st.empty()
@@ -106,7 +118,9 @@ st.markdown("---")
 # -------------------------------
 st.subheader("💬 Edit with Natural Language")
 
-command = st.text_input("Enter command (e.g. *generate highlights without captions*)")
+command = st.text_input(
+    "Enter command (e.g. *give captions in hindi*, *remove animations*)"
+)
 
 if st.button("✅ Apply Command"):
     if command.strip():
@@ -118,16 +132,17 @@ if st.button("✅ Apply Command"):
             cwd=PROJECT_ROOT
         )
 
+        # Reload updated state
         st.session_state.editor_state = load_editor_state()
-        st.success("✅ Command applied (state updated)")
+        st.success("✅ Command applied (logic updated)")
     else:
         st.warning("⚠️ Please enter a command")
 
 # -------------------------------
-# Optional Re-Render
+# Re-render (Explicit)
 # -------------------------------
-if st.button("🎬 Re-render Video (Optional)"):
-    with st.spinner("Re-rendering video…"):
+if st.button("🎬 Re-render Video"):
+    with st.spinner("Re-rendering video with updated logic…"):
         subprocess.run(["python", "renderer/render.py"], cwd=PROJECT_ROOT)
 
     st.success("✅ Video re-rendered")
