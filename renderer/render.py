@@ -137,7 +137,12 @@ def render_caption_block(words, width, style):
     # ---- STEP 4: draw text centered ----
     y = PADDING
     for line_words in lines:
-        x = PADDING
+        line_text = " ".join(line_words)
+        line_width = int(d.textlength(line_text, font=font))
+
+        # Center this line independently
+        x = (img_w - line_width) // 2
+
         for word in line_words:
             color = COLORS["accent"] if any(
                 w.get("word") == word and w.get("emphasized") for w in words
@@ -145,6 +150,7 @@ def render_caption_block(words, width, style):
 
             draw.text((x, y), word + " ", font=font, fill=color)
             x += int(font.getlength(word + " "))
+
         y += line_height
 
     return img
