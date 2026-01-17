@@ -1,17 +1,42 @@
+# ===============================
 # Python
+# ===============================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 venv/
+.env
 
-# Audio / Video outputs
+# ===============================
+# OS
+# ===============================
+.DS_Store
+Thumbs.db
+
+# ===============================
+# Audio / Video Outputs
+# ===============================
 *.wav
+*.mp3
 *.mp4
 *.mov
 
-# Whisper / Torch cache
+# ===============================
+# Generated Project Outputs
+# ===============================
+renderer/base.mp4
+renderer/output.mp4
+highlights/outputs/
+
+# ===============================
+# AI / Cache
+# ===============================
 .cache/
 torch_cache/
+.whisper_cache/
 
-# OS
-.DS_Store
-Thumbs.db
+# ===============================
+# Logs
+# ===============================
+*.log

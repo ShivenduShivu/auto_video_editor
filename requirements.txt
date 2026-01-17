@@ -1,19 +1,35 @@
+# ===============================
 # Core
+# ===============================
 python>=3.9
 
-# Audio / Video
+# ===============================
+# Audio / Video Processing
+# ===============================
 ffmpeg-python
 moviepy==1.0.3
 imageio
 imageio-ffmpeg
 
-# AI / Speech
+# ===============================
+# Speech to Text
+# ===============================
 openai-whisper
 torch
-
-# NLP / Utilities
-numpy
 tqdm
+numpy
 
-# Image rendering
+# ===============================
+# Image / Caption Rendering
+# ===============================
 Pillow
+
+# ===============================
+# Frontend
+# ===============================
+streamlit
+
+# ===============================
+# Utilities
+# ===============================
+python-dotenv
