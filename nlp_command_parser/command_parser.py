@@ -14,6 +14,42 @@ def save_state(state):
     with open(STATE_PATH, "w", encoding="utf-8") as f:
         json.dump(state, f, indent=2)
 
+# -----------------------------
+# STATE NORMALIZATION (SAFETY)
+# -----------------------------
+
+def normalize_state(state):
+    state.setdefault("caption_style", {})
+    state["caption_style"].setdefault("bold", True)
+    state["caption_style"].setdefault("size", "medium")
+    state["caption_style"].setdefault("background", "auto")
+    state["caption_style"].setdefault("animation", "subtle")
+
+    state.setdefault("broll", {})
+    state["broll"].setdefault("enabled", True)
+    state["broll"].setdefault("visibility", "auto")
+    state["broll"].setdefault("positioning", "right")
+
+    state.setdefault("animations", {})
+    state["animations"].setdefault("enabled", False)
+    state["animations"].setdefault("default", "fade")
+
+    state.setdefault("overlays", {})
+    state["overlays"].setdefault("enabled", True)
+    state["overlays"].setdefault("mode", "auto")
+
+    state.setdefault("emphasis", {})
+    state["emphasis"].setdefault("min_emphasized_words", 2)
+
+    state.setdefault("captions", {})
+    state["captions"].setdefault("language", "original")
+
+    return state
+
+# -----------------------------
+# APPLY INTENTS (UNCHANGED)
+# -----------------------------
+
 def apply_intents(state, payload):
     intents = payload.get("intents", [])
     confidence = payload.get("confidence", 0)
@@ -81,8 +117,12 @@ def apply_intents(state, payload):
 
     return state
 
+# -----------------------------
+# ENTRY POINT
+# -----------------------------
+
 def parse_command(command: str):
-    state = load_state()
+    state = normalize_state(load_state())
     payload = extract_intent(command)
     state = apply_intents(state, payload)
     save_state(state)
