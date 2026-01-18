@@ -1,15 +1,27 @@
 {
   "caption_style": {
-    "bold": true
+    "bold": true,
+    "size": "small",
+    "background": "never",
+    "animation": "subtle"
+  },
+  "broll": {
+    "enabled": true,
+    "visibility": "prominent",
+    "positioning": "left"
   },
   "animations": {
     "enabled": false,
     "default": "fade"
   },
+  "overlays": {
+    "enabled": true,
+    "mode": "auto"
+  },
   "emphasis": {
     "min_emphasized_words": 2
   },
-  "overlays": {
-    "enabled": true
+  "captions": {
+    "language": "original"
   }
 }
